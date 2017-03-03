@@ -7,20 +7,21 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"antd-mobile": "^0.9.11",
-		"dva": "^1.1.0",
-		"firebase": "^3.6.0",
+		"dva": "^1.2.1",
+		"firebase": "^3.7.0",
 		"lodash": "^4.17.2",
 		"moment": "^2.17.1",
 		"react": "15.4.2",
-		"react-native": "0.41.2"
+		"react-dom": "^15.4.2",
+		"react-native": "0.41.2",
+		"react-native-router-flux": "3.37.0"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
 		"babel-preset-react-native": "1.9.1",
 		"jest": "19.0.2",
-		"react-test-renderer": "15.4.2",
-		"jscs": "^3.0.7"
+		"jscs": "^3.0.7",
+		"react-test-renderer": "15.4.2"
 	},
 	"jest": {
 		"preset": "react-native"
