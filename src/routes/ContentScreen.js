@@ -4,9 +4,9 @@ import {
   Text,
   View,
   Image,
-  WebView,
   ScrollView,
 } from 'react-native';
+import MyWebView from 'react-native-webview-autoheight';
 import { connect } from 'dva/mobile';
 import { Card, CardSection } from '../common';
 import { ReactNativeAudioStreaming, Player } from 'react-native-audio-streaming';
@@ -44,10 +44,8 @@ class ContentScreen extends Component {
           </Text>
         </CardSection>
         <CardSection>
-          <WebView 
-            scrollEnabled={true}
+          <MyWebView
             source={{html: questionDetail}}
-            style={{height: 200}}
             />
         </CardSection>
         <CardSection>
@@ -56,10 +54,8 @@ class ContentScreen extends Component {
           </Text>
         </CardSection>
         <CardSection>
-          <WebView 
-            scrollEnabled={true}
+          <MyWebView
             source={{html: transcriptDetail}}
-            style={{height: 3000}}
           />
         </CardSection>
         <CardSection>
@@ -68,10 +64,8 @@ class ContentScreen extends Component {
           </Text>
         </CardSection>
         <View>
-          <WebView 
-            scrollEnabled={true}
+          <MyWebView
             source={{html: vocabularyDetail}}
-            style={{height: 500}}
           />
         </View>
       </ScrollView>
