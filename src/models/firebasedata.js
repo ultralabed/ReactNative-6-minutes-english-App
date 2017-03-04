@@ -16,7 +16,6 @@ export default {
         .on('value', (snapshot) => {
           const sixMinEngData = snapshot.val();
           if (sixMinEngData) {
-            console.log('after initFirebase')
             dispatch({ type: 'fetchedData', payload: sixMinEngData });
           }
         });
