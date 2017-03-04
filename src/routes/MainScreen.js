@@ -41,24 +41,24 @@ class MainScreen extends Component {
 }
 
 const mapStateToProps = ({ Firebasedata }) => {
-  // const { sixMinEngData } = Firebasedata;
+  const { sixMinEngData } = Firebasedata;
   console.log('!!!!!!',sixMinEngData);
-  const sixMinEngData = [{
-      id: 'Episode 170209',
-      heading: 'Can you trust your own eyes?',
-      image: 'http://ichef.bbci.co.uk/images/ic/320x180/p04vg694.jpg',
-      time: '09 Feb 2017',
-      audio: 'http://downloads.bbc.co.uk/learningenglish/features/6min/170209_6min_english_eyewitness_download.mp3',
-      vocabularyTitle: 'Vocabulary',
-    },{
-      id: 'Episode 170208',
-      heading: 'Believe your own faith?',
-      image: 'http://ichef.bbci.co.uk/images/ic/256xn/p026r9h2.jpg',
-      time: '07 Feb 2017',
-      audio: 'http://downloads.bbc.co.uk/learningenglish/features/6min/170209_6min_english_eyewitness_download.mp3',
-      vocabularyTitle: 'Vocabulary',
-    },
-  ];
+  // const sixMinEngData = [{
+  //     id: 'Episode 170209',
+  //     heading: 'Can you trust your own eyes?',
+  //     image: 'http://ichef.bbci.co.uk/images/ic/320x180/p04vg694.jpg',
+  //     time: '09 Feb 2017',
+  //     audio: 'http://downloads.bbc.co.uk/learningenglish/features/6min/170209_6min_english_eyewitness_download.mp3',
+  //     vocabularyTitle: 'Vocabulary',
+  //   },{
+  //     id: 'Episode 170208',
+  //     heading: 'Believe your own faith?',
+  //     image: 'http://ichef.bbci.co.uk/images/ic/256xn/p026r9h2.jpg',
+  //     time: '07 Feb 2017',
+  //     audio: 'http://downloads.bbc.co.uk/learningenglish/features/6min/170209_6min_english_eyewitness_download.mp3',
+  //     vocabularyTitle: 'Vocabulary',
+  //   },
+  // ];
   
   return {
     sixMinEngData,
