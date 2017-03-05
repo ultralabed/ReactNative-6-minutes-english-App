@@ -6,7 +6,7 @@ import { Card, CardSection } from '../common';
 class ListItem extends Component {
   onRowPress() {
     console.log(this.props.sixMinEngData)
-    Actions.contentScreen({ title: this.props.sixMinEngData.id, sixMinEngData: this.props.sixMinEngData });
+    Actions.contentScreen({ title: this.props.sixMinEngData.heading, sixMinEngData: this.props.sixMinEngData });
   }
 
   render() {
@@ -52,6 +52,7 @@ const styles = {
     fontSize: 18,
     paddingLeft: 15,
     alignSelf: 'center',
+    color: '#000',
   },
   imageStyle: {
     flex: 1,
