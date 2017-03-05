@@ -4,6 +4,7 @@ import {
   Text,
   View,
   ListView,
+  ActivityIndicator,
 } from 'react-native';
 import { connect } from 'dva/mobile';
 import ListItem from '../components/ListItem';
@@ -29,23 +30,42 @@ class MainScreen extends Component {
   }
 
   render() {
-    const { sixMinEngData } = this.props;
+    const { sixMinEngData, loadingData } = this.props;
+    const { centering } = styles;
 
     return (
-      <ListView 
-        enableEmptySections
-        dataSource={this.dataSource}
-        renderRow={this.renderRow}
-      />
+      <View>
+        {loadingData ?
+          (<ActivityIndicator
+              animating={loadingData}
+              style={[centering, {height: 80}]}
+              size="large"
+          />)
+          :
+        null}
+
+        <ListView
+          enableEmptySections
+          dataSource={this.dataSource}
+          renderRow={this.renderRow}
+        />
+      </View>
     );
   }
 }
-
+const styles = {
+  centering: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+  },
+};
 const mapStateToProps = ({ Firebasedata }) => {
-  const { sixMinEngData } = Firebasedata;
+  const { sixMinEngData, loadingData } = Firebasedata;
 
   return {
     sixMinEngData,
+    loadingData,
   };
 }
 
