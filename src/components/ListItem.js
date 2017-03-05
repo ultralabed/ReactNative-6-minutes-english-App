@@ -11,8 +11,8 @@ class ListItem extends Component {
 
   render() {
     console.log(this.props.sixMinEngData)
-    const { idStyle, timeStyle, titleStyle, imageStyle } = styles;
-    const {id, heading, time, image} = this.props.sixMinEngData;
+    const { idStyle, timeStyle, titleStyle, imageStyle, summarytyle } = styles;
+    const { id, heading, time, image, summary } = this.props.sixMinEngData;
     return (
       <TouchableOpacity onPress={this.onRowPress.bind(this)}>
         <Card>
@@ -31,6 +31,11 @@ class ListItem extends Component {
               source={{uri: image}}
             />
           </CardSection>
+          <CardSection>
+            <Text style={summarytyle}>
+              { summary }
+            </Text>
+          </CardSection>
         </Card>
       </TouchableOpacity>
     );
@@ -44,22 +49,26 @@ const styles = {
   },
   timeStyle: {
     fontSize: 12,
-    paddingRight: 5,
     textAlign: 'center',
     lineHeight: 18,
   },
   titleStyle: {
     fontSize: 18,
     paddingLeft: 15,
+    paddingBottom: 10,
     alignSelf: 'center',
     color: '#000',
   },
   imageStyle: {
-    flex: 1,
     width: 320,
     height: 180,
     resizeMode: 'contain'
-  }
+  },
+  summarytyle: {
+    padding: 10,
+    fontSize: 16,
+    textAlign: 'justify',
+  },
 };
 
 export default ListItem;
